@@ -80,16 +80,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 	function insertImages()
 	{
-	exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    	exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
+    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
-	for(let index  = 0; index < exampleVariable1; index++)
-	{
-		var smileyImage = document.createElement("img");
-		smileyImage.src = "https://i.imgur.com/jctdkSS.png"; 
-		document.getElementById("specialsurprise").appendChild(smileyImage);
+		for(let index  = 0; index < exampleVariable1; index++)
+			{	
+				var smileyImage = document.createElement("img");
+				smileyImage.src = "https://i.imgur.com/jctdkSS.png"; 
+				document.getElementById("specialContent").appendChild(smileyImage);
 
-                      }
+			}
 		
 		for(let index2 = 0; index2 < exampleVariable2; index2++)
 			
@@ -97,13 +97,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 				var frownyImage= document.createElement("img");
 				frownyImage.src = "https://i.imgur.com/dVUqrSt.png";
-				document.getElementById("specialsurprise").appendChild(frownyImage);
+				document.getElementById("specialContent").appendChild(frownyImage);
 			}
 		
 		
 		document.getElementById("contentResult").innerHTML = "You inserted " + exampleVariable1 + "smiley faces and " + exampleVariable2 + "frowny faces!"; 
 		
 	}
+	
+	
+	
+	
+	
+	
 </script>
   
   
@@ -129,6 +135,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+	
+
 </style>
 
 
@@ -138,13 +146,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <!--Landing page content.-->
   <div id="content" class="w3-container">
   	<!--Header!-->
-	<div id="header" class="w3-container w3-flat-emerald">
-		<h1>APP NAME GOES HERE</h1>
+	<div id="header" class="w3-container w3-flat-aqua">
+		<h1>Amanda's App</h1>
 	</div>
 	
 	  <p>INTRODUCTION/DESCRIPTION OF APP GOES HERE</p>
 	
 	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
+	  <!--Button for page 2--> 
+	  <a href="#two" class="w3-btn w3-aqua w3-round">Click here to see your perfect vehicle!</a>
 	
 	  <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code. THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION!</p>
   
@@ -152,7 +162,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
 <!--FIRST SUBPAGE-->
 <div id="one" class="page">
-	<div id="header2" class="w3-container w3-flat-emerald">
+	<div id="header2" class="w3-container w3-flat-aqua">
 		<h1>Question 1</h1>
 	</div>
 	
@@ -179,42 +189,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
   <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
-  <a href="#specialsuprise" onclick="insertImages();" class="w3-btn w3-grey">Special Button</a>   
+  <a href="#specialpage" onclick="insertImages();" class="w3-btn w3-grey">Special Button</a> 
+    
   </center>
 </div>  
   
-	  	<!--This is the Special Surprise page.-->
-<div id="specialsurprise" class="page">
-	<!--Header.-->
-		<div id="specialheader" class="w3-container w3-flat-emerald">
-			<h1>specialsuprisepage!</h1>
-		</div>
-    		<center>
-		<!--Main content of the page.-->
-<div id="specialsurprisecontent" class="w3-container">
-<p id="contentResult">Man!</p>
-</div>
-  		
-		<!--A link that runs a function when clicked and takes the user to a new page.-->
-<a href=“#specialsurprise" onclick="reset variables();" class="w3-btn w3-grey>Return to Home Page</a>
-	<center>
-</div>
-
   
   
 
 	  
-	  
-	  
-	  
-	  
-	  
-	  
+<!--Special Page--> 
+	  <div id="specialpage" class="page">
+		  <!--header-->
+		  <div id="specialheader" class="w3-container w3-flat-aqua">
+			  <h1>Special Page!</h1>
+		  </div>
+		  
+		  <center>
+		  <!--Main content-->
+		  <div id="specialContent" class="w3-container"> 
+			  <p id="contentResult">Man!</p>
+		  </div>
+		  <!--A link that takes the user to a new page-->
+		  
+		  <a href="#content" onclick="resetVariables();" class="w3-btn w3-grey">Return to Home Page</a>
+			 
+			  <center>
+	  </div>	
 	  
 	  
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
-	<div id="finalheader" class="w3-container w3-flat-emerald">
+	<div id="finalheader" class="w3-container w3-aqua">
 		<h1>FINAL PAGE TITLE GOES HERE</h1>
 	</div>
 	
@@ -230,13 +236,95 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   </a>
   <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
     
+	  
+<!--SECOND SUBPAGE-->
+	<div id="two" class="page"> 
+	<div id="header2" class="w3-container w3-aqua">
+		<h1> May I choose a____vehicle for you? </p>
+		
+	</div>
+	
+	<center>
+	<!--Main content of the page-->
+		<div id="content3" class="w-3 container">
+			<p>May I choose a vehicle for you?</p>
+		</div>
+		
+		<center>
+		<!--User input--> 
+		<a href=#three onclick="myfunction(vehicle)" class="w3-btn w3-flat-sage"> Sports </a>
+			<center>
+				<br>
+		<a href=#four onclick="myfunction(vehicle)" class="w3-btn w3-flat-sage" style="width: 67px">Convertible </a>
+			<center>
+				<br>	
+		<a href=#five onclick="myfunction(vehicle)" class="w3-btn w3-flat-sage" style="width: 67px">Compact </a>
+		<center>
+				<br>
+			
+		<a href=#content class="w3-btn w3-black"> No </a>
+		
+		<center> 
+		<br>
+		</div>
+  
+	  
+<!--Third Subpage-->
+<div id="three" class="page">
+	<div id="header 3" class="w3-container w3-aqua>
+		<h1> Sports </p>
+		
+	</div>
+			
+<html>
+<body>
+
+<!--Form element. Allows user input in HTML--> 
+<form>
+  <input type="transportation" name="vehicle" onclick="myFunction(this.value)" value="2020 Ford Mustang Sports Car>Vehicle One<br>
+  <input type="transportation" name="vehicle" onclick="myFunction(this.value)" value="Mazda MX-5">Vehicle Two<br>
+  <input type="transportation" name="vehicle" onclick="myFunction(this.value)" value="2023 Volkswagen GTI">Vehicle Three<br>
+  <input type="transportation" name="vehicle" onclick="myFunction(this.value)" value="Tesla">Vehicle Four<br>
+  <input type="transportation" name="vehicle" onclick="myFunction(this.value)" value="help">Vehicle Five<br><br>
+
+  Your vehicle is: <input type="text" id="result">
+</form>
+
+<script>
+function myFunction(vehicle) {
+  document.getElementById("result").value = vehicle;
+}
+</script>
+
+</body>
+</html>	
+	  
+		</div>
   </center>
-</div>
+</div>		  
   
-  
+<!--Fourth Subpage for vehicle option convertible -->
+<div id="four" class="page">
+	<div id="header 4" class="w3-container w3-flat-sage">
+		<h1> Sad </p>
+		
+	</div>
+			
+
+
+
+</body>
+</html>
+
+	  
+		</div>
+  </center>
+</div>			
+				
+				
   
 <!--Footer!-->
-<footer class="w3-bottom w3-container w3-flat-emerald">
+<footer class="w3-bottom w3-container w3-aqua">
 	<p>Thank you for participating!</p>
 </footer>
 </div>
