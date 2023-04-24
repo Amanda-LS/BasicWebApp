@@ -33,6 +33,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var exampleVariable2 = 0;
 	var exampleVariable3 = 0;
 	
+	//addition function
 	function exampleFunction1()
 	{
 		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
@@ -43,6 +44,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		console.log("Addition function was run.");
 	}
+	//subtraction function
 	function exampleFunction2()
 	{
 		exampleVariable1= parseFloat(document.getElementById("firstInputBox").value);
@@ -52,6 +54,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		console.log("Subtraction function was run.");
 	}	
+	//multiplication function
 	function exampleFunction3()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
@@ -61,6 +64,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		console.log("Multiplication function was run.");
 	}
+	//division function 
 	function exampleFunction4()
 	{
 		exampleVariable1= parseFloat(document.getElementById("firstInputBox").value);
@@ -70,6 +74,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		console.log("Division function was run.");
 	}
+	//exponent function
 	function exampleFunction5()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
@@ -80,11 +85,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Exponent function was run.");
 		
 	}	
+	//Will display user's results based upon the calculational function they have utilized
 	function exampleResultsFunction()
 		{
 		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
 		resetVariables();
 	}
+	// Below will reset the variables to 0
 	function resetVariables()
 	{
 		exampleVariable1 = 0;
@@ -92,7 +99,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable3 = 0;
 		
 	}
-		
+	//inserts a number of smiley and frowny faces on the alternate page after the user has inputted their select numbers
 	function insertImages()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
@@ -186,6 +193,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		<br><br><br>
 	</form>
+     <!--Below are the available functions within the app, they will show up as buttons-->  
   <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Addition</a>
   <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Subtract</a> 
   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Multiplication</a>
@@ -200,7 +208,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   
 
 	  
-<!--Special Page--> 
+<!--Special Page where Smiley and frowny faces will display--> 
 	  <div id="specialpage" class="page">
 		  <!--header-->
 		  <div id="specialheader" class="w3-container w3-blue-grey">
