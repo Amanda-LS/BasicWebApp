@@ -43,8 +43,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		console.log("Addition function was run.");
 	}
-	//multiplication function
+	//subtraction function
 	function exampleFunction2()
+	{
+		exampleVariable1= parseFloat(document.getElementById("firstInputBox").value);
+		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+		
+		exampleVariable3 = exampleVariable1 - exampleVariable2;
+		
+		console.log("Subtraction function was run.");
+	}	
+	//multiplication function
+	function exampleFunction3()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
@@ -54,8 +64,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Multiplication function was run.");
 	}
 	
+	//division function 
+	function exampleFunction4()
+	{
+		exampleVariable1= parseFloat(document.getElementById("firstInputBox").value);
+		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+		
+		exampleVariable3 = exampleVariable1 / exampleVariable2;
+		console.log("Division function was run.");
+	}
+	
 	//exponent function
-	function exampleFunction3()
+	function exampleFunction5()
 	{
 		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
@@ -178,8 +198,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<br><br><br>
 	</form>
   <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Addition</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Multiplication</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Exponential</a>
+  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Subtract</a> 
+  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Multiplication</a>
+  <a href="#finalpage" onclick="exampleFunction4();" class="w3-btn w3-grey">Division</a>
+  <a href="#finalpage" onclick="exampleFunction5();" class="w3-btn w3-grey">Exponential</a>
   <a href="#specialpage" onclick="insertImages();" class="w3-btn w3-grey">Special Button</a> 
     
   </center>
