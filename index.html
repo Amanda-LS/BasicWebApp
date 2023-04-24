@@ -66,7 +66,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable1= parseFloat(document.getElementById("firstInputBox").value);
 		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
-		exampleVariable3 = exampleVariable1 / exampleVariable2;
+		exampleVariable3 = exampleVariable1 / exampleVariable3;
 		console.log("Division function was run.");
 	}
 	function exampleFunction5()
@@ -94,21 +94,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
 		
 		for(let index  = 0; index < exampleVariable1; index++)
-			{	
+		{	
 				var smileyImage = document.createElement("img");
 				smileyImage.src = "https://i.imgur.com/jctdkSS.png"; 
 				document.getElementById("specialContent").appendChild(smileyImage);
 
-			}
-		for(let index2 = 0; index2 < exampleVariable2; index2++)
-			{
+		  }
+		  for(let index2 = 0; index2 < exampleVariable2; index2++)
+		  {
 		
 				var frownyImage= document.createElement("img");
 				frownyImage.src = "https://i.imgur.com/dVUqrSt.png";
 				document.getElementById("specialContent").appendChild(frownyImage);
-			}
+			  }
 		document.getElementById("contentResult").innerHTML = "You inserted " + exampleVariable1 + "smiley faces and " + exampleVariable2 + "frowny faces!"; 
-            }
+           }
    </script>
   
   
